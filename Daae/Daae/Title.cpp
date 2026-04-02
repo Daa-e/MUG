@@ -30,20 +30,19 @@ void Title::DrawTitle()
 	UINT oldCP = GetConsoleOutputCP(); // 지금 쓰고있는 유니코드 저장
 	SetConsoleOutputCP(65001);		   // 유니코드 6501
 
-	system("mode con cols=120 lines=30");
 	system("cls");
 
 	setColor(7);
-	gotoxy(25, 7);  std::cout << "	   ██████  ██████   █████   ██████   ██████  ███    ██" << std::endl;
-	gotoxy(25, 8);  std::cout << "	   ██   ██ ██   ██ ██   ██ ██       ██    ██ ████   ██" << std::endl;
-	gotoxy(25, 9);  std::cout << "	   ██   ██ ██████  ███████ ██   ███ ██    ██ ██ ██  ██" << std::endl;
-	gotoxy(25, 10); std::cout << "	   ██   ██ ██   ██ ██   ██ ██    ██ ██    ██ ██  ██ ██" << std::endl;
-	gotoxy(25, 11); std::cout << "	   ██████  ██   ██ ██   ██  ██████   ██████  ██   ████" << std::endl;
-	gotoxy(25, 13); std::cout << "                                                " << std::endl;
-	gotoxy(25, 16); std::cout << "                        Press Enter to Start...                  " << std::endl;
+	gotoxy(57, 21);  std::cout << "	   ██████  ██████   █████   ██████   ██████  ███    ██" << std::endl;
+	gotoxy(57, 22);  std::cout << "	   ██   ██ ██   ██ ██   ██ ██       ██    ██ ████   ██" << std::endl;
+	gotoxy(57, 23);  std::cout << "	   ██   ██ ██████  ███████ ██   ███ ██    ██ ██ ██  ██" << std::endl;
+	gotoxy(57, 24); std::cout << "	   ██   ██ ██   ██ ██   ██ ██    ██ ██    ██ ██  ██ ██" << std::endl;
+	gotoxy(57, 25); std::cout << "	   ██████  ██   ██ ██   ██  ██████   ██████  ██   ████" << std::endl;
+	gotoxy(57, 26); std::cout << "                                                " << std::endl;
+	gotoxy(57, 27); std::cout << "                        Press Enter to Start...                  " << std::endl;
 
 	setColor(14);
-	gotoxy(80, 20); std::cout << gameTitle << " by Daae" <<std::endl;
+	gotoxy(150, 50); std::cout << gameTitle << " by Daae" <<std::endl;
 
 	// 키 입력 대기 (반환값 무시)
 	(void)_getch();
